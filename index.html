@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>garage organizer</title>
+		<script src="wobject.js"></script>
+		<script src="garage.js"></script>
+		<style>
+		html, body {
+			width: 100%;
+			height: 100%;
+			margin: 0px;
+		}
+		canvas {
+			/* vignette overlay */
+			background: -webkit-radial-gradient(rgba(127, 127, 127, 0.5),
+												rgba(127, 127, 127, 0.5) 35%,
+												rgba(0, 0, 0, 0.7));
+		}
+		#palette {
+			border: 1px solid white;
+			background: orange;
+			font-family: sans-serif;
+			/*background: rgba(200, 200, 200, 0.5);*/
+			opacity: 50%;
+			text-align: right;
+			position: absolute;
+			padding: 2px;
+			padding-bottom: 4px;
+			right: 75px;
+			top: 125px;
+			z-index: 999999;
+			width: 250px;
+		}
+		.dim {
+			width: 50px;
+		}
+		</style>
+	</head>
+	<body onload="init()">
+		<div id="palette">
+			<h1>garage organizer</h1>
+			<p>figure out how much room your stuff takes up</p>
+			<h2>create object</h2>
+			<input id="width" class="dim" value="59.1"/> x <input id="height" class="dim" value="148.8"/> inches
+			<div><label for="tag">named</label> <input name="tag" id="tag" value="fiat 850 spider"/></div>
+			<button type="button" id="createObjectButton">do it</button>
+		</div>
+
+		<canvas id="graphics"/>
+	</body>	
+</html>
